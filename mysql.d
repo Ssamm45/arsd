@@ -43,7 +43,7 @@ class MySqlResult : ResultSet {
 
 	this(MYSQL_RES* r, string sql) {
 		result = r;
-		itemsTotal = length();
+		itemsTotal = length().to!int;
 		itemsUsed = 0;
 
 		this.sql = sql;
